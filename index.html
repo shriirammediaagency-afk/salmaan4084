@@ -1,106 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Master the Market – Beginner's Guide</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Master the Market – Beginner's Guide">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop">
-
-  <!-- Minimal CSS (inline for speed) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Salman Memon - Halal Work</title>
   <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #00f0ff;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
+
+    body {
+      background-color: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0;
     }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
+
+    /* Mobile Container */
+    .mobile-container {
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+      min-height: 100vh;
+      padding: 24px 16px 36px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
     }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
+
+    /* Live Traders Badge */
+    .online-badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: #dcfce7;
+      color: #15803d;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 18px;
     }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
+
+    .online-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      margin-right: 7px;
+      box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
     }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
+
+    /* Profile Avatar */
+    .avatar-wrapper {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: #2563eb;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+      margin-bottom: 14px;
     }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #e2e8f0;
+      display: block;
+    }
+
+    /* Profile Info */
+    .profile-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .sub-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .trophy-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 2px;
+    }
+
+    .rating-count {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    /* CTA Buttons */
+    .cta-btn {
+      width: 100%;
+      background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 15px 16px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      transition: transform 0.1s ease;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Stats Grid */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid #edf2f7;
+      border-radius: 14px;
+      padding: 12px 4px;
+    }
+
+    .stat-number {
+      font-size: 17px;
+      font-weight: 800;
+      color: #2563eb;
+      margin-bottom: 2px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* Headings */
+    .headline {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .headline span {
+      color: #2563eb;
+    }
+
+    .sub-headline {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    /* Limited Access Banner */
+    .limited-box {
+      width: 100%;
+      background: #fffbeb;
+      border: 1px dashed #f59e0b;
+      color: #b45309;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 14px;
+    }
+
+    /* Features List */
+    .features-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid #edf2f7;
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .feature-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .feature-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #94a3b8;
+      margin-top: 10px;
+      padding: 0 4px;
+    }
+
+    .disclaimer strong {
+      color: #64748b;
+    }
   </style>
 </head>
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Master the Market – Beginner's Guide</h1>
-    <p class="sub">Master the basics with beginner-friendly lessons</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+  <div class="mobile-container">
+    <!-- Live Traders Badge -->
+    <div class="online-badge">
+      <span class="online-dot"></span>
+      5,947 Traders Online Now
+    </div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+    <!-- Profile Avatar (yahan apni image ka direct URL ya salmaan.png dalein) -->
+    <div class="avatar-wrapper">
+      <img src="salmaan.png" alt="Salman Memon" class="avatar-img">
+    </div>
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp77.html" rel="nofollow">Start Learning</a>
+    <!-- Profile Info -->
+    <div class="profile-name">SALMAN MEMON</div>
+    <div class="sub-title">( HALAL WORK )</div>
+    <div class="trophy-text">🏆 India's No.1 Stock Market Channel</div>
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+    <div class="stars">★★★★★</div>
+    <div class="rating-count">4.9/5 (2340 Reviews)</div>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+    <!-- CTA 1 -->
+    <a href="https://t.me/+s_FLiJ74DbhlNTdl" target="_blank" class="cta-btn">
+      Join Free Telegram Channel →
+    </a>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Members</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Years</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+    </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <!-- Text Highlight -->
+    <div class="headline">
+      Get <span>FREE</span> Daily Calls<br>
+      for NIFTY, BANKNIFTY & SENSEX
+    </div>
+    <div class="sub-headline">Join thousands of traders getting daily market analysis</div>
+
+    <!-- Limited Access -->
+    <div class="limited-box">
+      🔥 Limited FREE Access Available
+    </div>
+
+    <!-- Features -->
+    <div class="features-list">
+      <div class="feature-card">
+        <span class="feature-icon">📈</span>
+        <span class="feature-title">Daily Nifty & BankNifty Levels</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎓</span>
+        <span class="feature-title">Educational Market Analysis</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">👥</span>
+        <span class="feature-title">50,000+ Subscribers Community</span>
+      </div>
+    </div>
+
+    <!-- CTA 2 -->
+    <a href="https://t.me/+s_FLiJ74DbhlNTdl" target="_blank" class="cta-btn">
+      Join Free Telegram Channel →
+    </a>
+
+    <!-- Disclaimer -->
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> This channel is for educational purposes only. Trading involves market risk. Please consult your financial advisor before making investment decisions.
+    </p>
+  </div>
+
 </body>
 </html>
